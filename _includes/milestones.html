@@ -1,8 +1,8 @@
-{% assign denar = include.denar | convert: "numeric" %}
-{% assign milestone = include.milestone | convert: "numeric" %}
+{% assign denar = include.denar | times: 1 %}
+{% assign milestone = include.milestone | times: 1 %}
 
 <tr>
-    {% if denar < milestone %}
+    {% if denar >= milestone %}
     <td><img src="{{site.url}}pictures/yes_small.png" alt="Yes"></img></td>
     {% else %}
     <td><img src="{{ site.url }}pictures/no_small.png" alt="No"></img></td>

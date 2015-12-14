@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
-
+{% assign trenutniDenar = 0 %}
 {% for vplacilo in site.data.vplacila %}
 {% if vplacilo.ime == "Skupaj" %}
-{% assign trenutniDenar = vplacilo.znesek | convert: "number" %}
+{% assign trenutniDenar = vplacilo.znesek %}
 {% endif %}
 {% endfor %}
-
 <h1>Billiards!</h1>
 
 {{ site.welcome_text }}
@@ -25,6 +24,8 @@ layout: default
         <th>Miza</th> 
     </tr>
     {% include milestones.html denar=trenutniDenar milestone=400 miza="Miza 1" %}
+    {% include milestones.html denar=trenutniDenar milestone=500 miza="Miza 2" %}
+    {% include milestones.html denar=trenutniDenar milestone=2000 miza="Miza 3" %}
 </table>
 
 
