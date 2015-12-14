@@ -3,7 +3,7 @@ layout: default
 ---
 {% asign trenutniDenar = 0 %}
 {% for vplacilo in site.data.vplacila %}
-{% assign trenutniDenar = trenutniDenar + vplacilo.znesek %}
+{% assign trenutniDenar = vplacilo.znesek | convert = "number" | plus: trenutniDenar %}
 {% endfor %}
 
 ## Billiards!
