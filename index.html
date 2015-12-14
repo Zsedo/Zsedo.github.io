@@ -4,7 +4,7 @@ layout: default
 
 {% for vplacilo in site.data.vplacila %}
 {% if vplacilo.ime == "Skupaj" %}
-{% assign trenutniDenar = vplacilo.znesek | convert = "number" %}
+{% assign trenutniDenar = vplacilo.znesek | convert: "number" %}
 {% endif %}
 {% endfor %}
 
