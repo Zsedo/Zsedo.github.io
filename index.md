@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-
+{% asign trenutniDenar = 0 %}
 {% for vplacilo in site.data.vplacila %}
-{% if vplacilo.ime == "Skupaj" %}
-{% assign trenutniDenar = vplacilo.znesek %}
-{% endif %}
+{% assign trenutniDenar = trenutniDenar + vplacilo.znesek %}
 {% endfor %}
 
 ## Billiards!
@@ -19,8 +17,6 @@ layout: default
 
 | Completed | Znesek | Miza |
 | :---: | :---: | :---: |
-{% include milestones.md trenutniDenar=trenutniDenar milestone=500 miza="Miza 1" %}
-{% include milestones.md trenutniDenar=trenutniDenar milestone=1000 miza="Miza 2" %}
-{% include milestones.md trenutniDenar=trenutniDenar milestone=2000 miza="Miza 3" %}
+| a | b | c |
 
 [Donacije](../donacije)
