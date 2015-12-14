@@ -14,10 +14,4 @@ layout: default
 ## Trenutno zbran denar
 {{ trenutniDenar }}
 
-## Milestones:
-
-| Completed | Znesek | Miza |
-| :---: | :---: | :---: |
-| a | b | c |
-
 [Donacije](../donacije)
