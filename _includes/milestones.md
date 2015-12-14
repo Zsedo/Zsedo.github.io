@@ -1,8 +1,8 @@
 [yes]: {{ site.url }}pictures/yes_small.png "Yes"
 [no]: {{ site.url }}pictures/no_small.png "No"
 
-{% if trenutniDenar < milestone %}
-![][no] | milestone | miza
+{% if include.trenutniDenar < include.milestone %}
+![][no] | include.milestone | include.miza
 {% else %}
-![][yes] | milestone | miza
+![][yes] | include.milestone | include.miza
 {% endif% }
