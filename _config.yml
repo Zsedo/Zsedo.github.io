@@ -45,7 +45,3 @@ google_analytics:
 # 6. Welcome text, add <br /> to break lines
 welcome_text:     |
   Tu je pregled nad trenutno zbranim denarjem za bilijard mizo.
-
-# SPECIFICNO ZA BILIJARD
-zbran_denar: |
-  500 €
