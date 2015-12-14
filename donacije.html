@@ -10,9 +10,11 @@ layout: default
         <th>Znesek</th> 
     </tr>
 {% for vplacilo in site.data.vplacila %}
+{% if vplacilo.ime != "Skupaj" %}
     <tr>
         <td>{{ vplacilo.ime }}</td>
         <td>{{ vplacilo.znesek }}</td>
     </tr>
+{% endif %}
 {% endfor %}
 </table>

@@ -2,22 +2,25 @@
 layout: default
 ---
 
-[yes]: {{ site.url }}pictures/yes_small.png "Yes"
-[no]: {{ site.url }}pictures/no_small.png "No"
+{% for vplacilo in site.data.vplacila %}
+{% if vplacilo.ime == "Skupaj" %}
+{% assign trenutniDenar = vplacilo.znesek %}
+{% endif %}
+{% endfor %}
 
 ## Billiards!
 
 {{ site.welcome_text }}
 
 ## Trenutno zbran denar
-{{ site.zbran_denar }}
+{{ trenutniDenar }}
 
 ## Milestones:
 
-|Completed | Znesek | Miza |
+| Completed | Znesek | Miza |
 | :---: | :---: | :---: |
-| ![][yes] | 500 | Miza 1 |
-| ![][yes] | 1000 | Miza 2 |
-| ![][no] | 2000 | Miza 3 |
+{% include milestone.md trenutniDenar=trenutniDenar milestone=500 miza="Miza 1" %}
+{% include milestone.md trenutniDenar=trenutniDenar milestone=1000 miza="Miza 2" %}
+{% include milestone.md trenutniDenar=trenutniDenar milestone=2000 miza="Miza 3" %}
 
 [Donacije](../donacije)
