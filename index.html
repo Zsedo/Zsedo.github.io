@@ -4,14 +4,13 @@ layout: default
 {% asign trenutniDenar = 0 %}
 {% for vplacilo in site.data.vplacila %}
 {% assign znesek = vplacilo.znesek | convert = "number" %}
-{% asign trenutniDenar = znesek | plus: trenutniDenar %}
+{% asign trenutniDenar = trenutniDenar | plus: znesek %}
 {% endfor %}
 
-## Billiards!
-
+<h1>Billiards!</h2>
 {{ site.welcome_text }}
 
-## Trenutno zbran denar
+<h2> Trenutno zbran denar </h2>
 {{ trenutniDenar }}
 
-[Donacije](../donacije)
+<a href="../donacije">Donacije</a>
